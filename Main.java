@@ -1,39 +1,38 @@
 package com.company;
 
-import java.lang.*;
 
-public class Ball {
-    private String color;
-    private int size;
+public class Main {
 
-    public Ball(String color, int size) {
-        this.color = color;
-        this.size = size;
+    public static void main(String[] args) {
+        Book b1 = new Book("Lermontov", 150);
+        Book b2 = new Book("Pushkin", 70);
+        Book b3 = new Book("Brodsky", 100);
+        Book b4 = new Book("Gogol");
+
+        System.out.println(b1.toString());
+        System.out.println(b2.toString());
+        System.out.println(b3.toString());
+        System.out.println(b4.toString());
+
+        Dog d1 = new Dog("Bobik", 15);
+        Dog d2 = new Dog("Mike", 7);
+        Dog d3 = new Dog("Tyzik", 1);
+        Dog d4 = new Dog("Sam");
+
+        System.out.println(d1.toString());
+        System.out.println(d2.humanAge());
+        d3.setAge(200);
+        System.out.println(d3.humanAge());
+        System.out.println(d4.toString());
+
+        Ball a1 = new Ball("Green", 12);
+        Ball a2 = new Ball("Red", 9);
+        Ball a3 = new Ball("Blue", 1);
+        Ball a4 = new Ball("White");
+
+        System.out.println(a1.toString());
+        System.out.println(a2.toString());
+        System.out.println(a3.toString());
+        System.out.println(a4.toString());
     }
-
-    public Ball(String color) {
-        this.color = color;
-        this.size = -1;
-    }
-
-    public void setName(String color) {
-        this.color = color;
-    }
-
-    public void setAge(int size) {
-        this.size = size;
-    }
-
-    public String getName() {
-        return this.color;
-    }
-
-    public int getAge() {
-        return this.size;
-    }
-
-    public String toString() {
-        return String.format("color: %s | size: %d", this.color, this.size);
-    }
-
 }
